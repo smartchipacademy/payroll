@@ -1,0 +1,41 @@
+<a routerLink="/emp-form"></a>
+
+
+
+<h4 ><a href="empForm" style="color: rgb(11, 130, 234);">EMPLOYEE FORM</a></h4>
+<div style="padding: 5%;margin: auto;">
+    <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">EMPLOYEE DATA</p>
+    
+
+
+    
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">DateOfJoining</th>
+                <th scope="col">Email</th>
+                <th scope="col">BaseSalary</th>
+                <th scope="col">Bonus</th>
+                
+            </tr>
+      </thead>
+    
+    
+      <tbody>
+        <tr *ngFor="let emp of emp; let i=index">
+        <!-- <th scope="row">{{i+1}}</th> -->
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+        <td>{{emp.dateOfJoining}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.baseSalary}}</td>
+        <td>{{emp.bonus}}</td>
+    </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    

@@ -1,0 +1,31 @@
+<div class="form">
+    <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">EMPLOYEE DATA</p>
+    
+  <form [formGroup]="studentfrom" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+  <label for="name">name:</label>
+  <input id="name" type="text" formControlName="name" >
+  <label for="course">course:</label>
+  <input id="course" type="text" formControlName="course" >
+    </div>
+  <br>
+  <div class="mb-3">
+  <label for="phonenumber">phonenumber:</label>
+  <input id="phonenumber" type="data" formControlName="phonenumber" >
+  <label for="dateofbirth">dateofbirth:</label>
+  <input id="dateofbirth" type="date" formControlName="dateofbirth" >
+  </div>
+  <br>
+  <div class="mb-3">
+  <label for="courseFee">courseFee:</label>
+  <input id="courseFee" type="number" formControlName="courseFee" >
+  <label for="address">address:</label>
+  <input id="address" type="text" formControlName="address" >
+  </div>
+  <div style="text-align: center;">
+  <button type="submit" class="btn btn-success">Generate slip</button>
+  </div>
+  </form>
+  </div>
+  
+  

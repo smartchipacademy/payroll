@@ -1,0 +1,41 @@
+<a routerLink="/student-form"></a>
+
+
+<h4 ><a href="studentForm" style="color: rgb(11, 130, 234);">STUDENT FORM</a></h4>
+
+<div style="padding: 5%;margin: auto;">
+    <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">STUDENTS DATA</p>
+    
+
+
+    
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">FullName</th>
+                <th scope="col">Course</th>
+                <th scope="col">DateOfBirth</th>
+                <th scope="col">PhoneNumber</th>
+                <th scope="col">CourseFee</th>
+                <th scope="col">Address</th>
+                
+            </tr>
+      </thead>
+    
+    
+      <tbody>
+        <tr *ngFor="let student of students; let i=index">
+        <!-- <th scope="row">{{i+1}}</th> -->
+        <td>{{student.name}}</td>
+        <td>{{student.course}}</td>
+        <td>{{student.dateofbirth}}</td>
+        <td>{{student.phonenumber}}</td>
+        <td>{{student.courseFee}}</td>
+        <td>{{student.address}}</td>
+    </tr>
+        </tbody>
+    </table>
+    </div>
+    
+    

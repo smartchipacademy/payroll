@@ -1,0 +1,32 @@
+<div class="header">
+
+   <h4><div style="text-align:right;float:right;padding: 40px;">       
+    <h4><a href="/superuser-form" style="color: aliceblue;"> SUPERUSER-FORM</a></h4>
+        </div>
+
+
+    <div style="padding: 2%;margin: auto;">
+        <p style="font-family: Arial, sans-serif; font-size: 25px; font-weight: bold;">SUPERUSER LIST</p>
+        </div>
+    
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col"> Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody>
+    
+        <tr *ngFor="let user of users; let i=index"> 
+        <!-- <th scope="row">{{i+1}}</th> -->
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        
+    </tr>
+        </tbody>
+    </table>
+    

@@ -1,0 +1,30 @@
+<div class="form">
+  <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">EMPLOYEE DATA</p>
+  
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+<div class="mb-3">
+<label for="firstname">FirstName:</label>
+<input id="firstname" type="text" formControlName="firstname" >
+<label for="lastname">LastName:</label>
+<input id="lastname" type="text" formControlName="lastname" >
+  </div>
+<br>
+<div class="mb-3">
+<label for="dateofjoining">DateOfJoining:</label>
+<input id="dateofjoining" type="data" formControlName="dateofjoining" >
+<label for="email">Email:</label>
+<input id="inputEmail" type="email" formControlName="email" >
+</div>
+<br>
+<div class="mb-3">
+<label for="basesalary">BaseSalary:</label>
+<input id="basesalary" type="number" formControlName="basesalary" >
+<label for="bonus">Bonus:</label>
+<input id="Bonus" type="number" formControlName="bonus" >
+</div>
+<div style="text-align: center;">
+<button type="submit" class="btn btn-success">Generate salary</button>
+</div>
+</form>
+</div>
+

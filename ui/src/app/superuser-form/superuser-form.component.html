@@ -1,0 +1,41 @@
+
+<div class="header">
+
+    <h1 style="text-align: center;">SUPERUSER-FORM</h1> 
+    <form [formGroup]="SuperuserForm" (ngSubmit)="onSubmit()">
+<div class="form-container" >
+    
+    <fieldset>
+<div style="text-align: center;">
+    <div class="mb-3">
+            <label class="form-check-label" for="defaultcheck1">
+                name
+            </label>
+            <input class="form-check-input" class="checkbox" value="" id="defaultcheck1" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label class="form-check-label" for="defaultcheck1">
+                email
+            </label>
+            <input class="form-check-input" class="checkbox" value="" id="defaultcheck2" formControlName="email">
+            
+        </div>
+
+        <div class="mb-3">
+            <label class="form-check-label" for="defaultcheck">
+                password
+            </label>
+            <input class="form-check-input" class="checkbox" value="" id="defaultcheck3" formControlName="password">
+            
+        </div>
+        
+        <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+    </div>
+</fieldset>
+</div>
+</form>
+
+
+</div>
+
+

@@ -1,0 +1,31 @@
+<div class="header">
+   
+
+    <div style="text-align:right;float:right;padding: 40px;">          
+        <a href="/superadmin-forms" style="color: aliceblue;"> SUPERADMIN-FORMS</a>
+        </div>
+
+<div style="padding: 2%;margin: auto;">
+    <p style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;">SUPERADMIN LIST</p>
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col"> Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let admin of admins; let i=index"> 
+    <!-- <th scope="row">{{i+1}}</th> -->
+    <td>{{admin.name}}</td>
+    <td>{{admin.email}}</td>
+    <td>{{admin.password}}</td>
+    
+</tr>
+    </tbody>
+</table>
