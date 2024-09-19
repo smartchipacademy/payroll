@@ -26,8 +26,8 @@ export class SuperuserComponent implements OnInit {
   ngOnInit(): void {
 
         this.httpClient.get("http://localhost:8085/superuser").subscribe((data:any) => {
-        this.users=this.data;
-        console.log(this.data);
+        this.users= data;
+        console.log(data);
       });
   }
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule,FormGroup,FormBuilder} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-superuser-form',
@@ -11,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SuperuserFormComponent {
   SuperuserForm:FormGroup;
-  constructor(private formBuilder:FormBuilder,private httpClient:HttpClient){
+  constructor(private formBuilder:FormBuilder,private httpClient:HttpClient, private route: Router){
     this.SuperuserForm=this.formBuilder.group(
       {
         'name': '',
@@ -26,6 +27,7 @@ export class SuperuserFormComponent {
     this.httpClient.post('http://localhost:8085/superuser',this.SuperuserForm.value).subscribe((data:any)=>
     console.log('data',data)) ;
     this.SuperuserForm.reset(); 
+    this.route.navigate(["/login-form"]);
   };
 
 }

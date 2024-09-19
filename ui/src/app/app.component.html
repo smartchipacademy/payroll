@@ -19,41 +19,54 @@
       <span class="first-letter">M</span>anagement
       </h1>
     </div>
-  
+  </nav>
     
-      <div style="text-align: left;float: left;">
+      <!-- <div style="text-align: left;float: left;">
       <a href="emps" style="color: aliceblue;">EMPLOYEES</a>
       </div>
 
       <div style="text-align: left;float: left;">
        <a href="students" style="color: aliceblue;">STUDENTS</a>
-      </div>
+      </div> -->
 
-      
+      <div style="display: flex; flex-direction: row;">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" (change)="navigate()">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Super Admin
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" (change)="navigate1()">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Super user
+          </label>
+        </div>
+      </div>
   
-      <div style="text-align: left;float: left;">
-      <a href="superadmin" style="color: aliceblue;">SUPERADMIN</a>
+      <!-- <div style="text-align: left;float: left;">
+      <a href="superadmin-forms" style="color: rgb(2, 2, 2);">SUPERADMIN</a>
         </div>
   
        
 
         <div style="text-align: left;float: left;">
-          <a href="/superuser" style="color: aliceblue;">SUPERUSER</a>
-          </div>  
+          <a href="/superuser-form" style="color: rgb(2, 2, 2);">SUPERUSER</a>
+          </div>   -->
 
           
 
 
-           <div style="text-align: right;float:right;padding: 40px;">
+          <!-- <div style="text-align: right;float:right;padding: 40px;">
 
             <a href="/student-form" style="color: aliceblue;"></a>
-           </div>
+           </div> -->
 
 
     
             
 
-</nav>
+
   
 <router-outlet></router-outlet>
 

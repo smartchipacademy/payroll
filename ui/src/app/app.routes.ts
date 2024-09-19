@@ -8,6 +8,7 @@ import { SuperuserComponent } from './superuser/superuser.component';
 import { SuperuserFormComponent } from './superuser-form/superuser-form.component';
 import { StudentComponent } from './student/student.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 export const routes: Routes = [
 
@@ -35,6 +36,9 @@ export const routes: Routes = [
 },
 {
     path: "student-form",component:StudentFormComponent
+},
+{
+    path: 'login-form',component:LoginFormComponent
 }
 
 ];
