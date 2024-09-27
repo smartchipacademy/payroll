@@ -9,12 +9,11 @@ import { SuperuserFormComponent } from './superuser-form/superuser-form.componen
 import { StudentComponent } from './student/student.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SampleComponent } from './sample/sample.component';
 
 export const routes: Routes = [
 
-{
-    path: 'emps',component: EmpComponent
-},
 
 {
     path: "empForm",component:EmpFormComponent
@@ -23,7 +22,7 @@ export const routes: Routes = [
     path: "superadmin",component:SuperadminComponent
 },
 {
-    path: "superadmin-forms",component:SuperadminFormsComponent
+    path: "",component:SuperadminFormsComponent
 },
 {
     path: "superuser",component:SuperuserComponent
@@ -38,7 +37,22 @@ export const routes: Routes = [
     path: "student-form",component:StudentFormComponent
 },
 {
-    path: 'login-form',component:LoginFormComponent
-}
+    path: 'loginn',component:LoginFormComponent
+},
+{
+    path: '',component:DashboardComponent
+},
+{
+    'path': 'dashboard', component: DashboardComponent,
+    children: [
+      {
+        path: 'sample',
+        component: LoginFormComponent
+      },{
+        path: 'emps',component: EmpComponent
+    },
+    
+    ]
+  },
 
 ];
