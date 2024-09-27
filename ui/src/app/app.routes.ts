@@ -10,8 +10,7 @@ import { StudentComponent } from './student/student.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SampleComponent } from './sample/sample.component';
-
+ 
 export const routes: Routes = [
 
 

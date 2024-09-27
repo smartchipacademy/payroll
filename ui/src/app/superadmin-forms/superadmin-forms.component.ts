@@ -27,7 +27,7 @@ export class SuperadminFormsComponent {
     this.httpClient.post('http://localhost:8085/superadmin',this.SuperadminForms.value).subscribe((data:any)=>
     console.log('data',data)) ;
     this.SuperadminForms.reset();
-    this.route.navigate(["/dashboard/sample"]);
+    this.route.navigate(["/dashboard/emps"]);
   };
   navigate(){
 
