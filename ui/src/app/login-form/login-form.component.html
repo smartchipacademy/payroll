@@ -1,6 +1,7 @@
 <a routerLink="/dashboard/emp"></a>
 
 <a routerLink="/student"></a>
+<a routerLink="/admin-dashboard"></a>
 
 <a routerLink="/Superadmin-forms"></a>
 <a routerLink="/superadmin"></a>
@@ -30,11 +31,11 @@
     <a href="students" style="color: aliceblue">STUDENTS</a>
   </div>
 
-  <div style="text-align: left; float: left; align-items: center; margin: 5px">
+  <div style="text-align: left; float: left; align-items: center; margin: 5px" (click)="routeTosuperadmin(0)">
     <a href="superadmin" style="color: aliceblue">SUPERADMIN</a>
   </div>
 
-  <div style="text-align: left; float: left; align-items: center; margin: 5px">
+  <div style="text-align: left; float: left; align-items: center; margin: 5px" (click)="routeTosuperadmin(1)">
     <a href="/superuser" style="color: aliceblue">SUPERUSER</a>
   </div>
 
@@ -44,5 +45,8 @@
     <a href="/student-form" style="color: aliceblue"></a>
   </div>
 </nav>
+
+
+
 
 <!-- <router-outlet></router-outlet> -->

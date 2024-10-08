@@ -3,9 +3,10 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { EmpComponent } from './emp/emp.component';
 import { CommonModule } from '@angular/common';
 import { HttpService } from './http.service';
-
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 @Component({
   selector: 'app-root',

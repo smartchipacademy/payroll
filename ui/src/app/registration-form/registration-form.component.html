@@ -1,0 +1,54 @@
+<div class="register-container">
+  <form [formGroup]="registerForm" (ngSubmit)="onsubmit()">
+    <h2>Register</h2>
+
+
+    <div>
+      <label for="Userid">Userid</label>
+      <input id="Userid" type="text" formControlName="Userid" />
+      <div formControlName="submitted && registerForm.controls['Userid'].invalid">
+        <small formControlName="registerForm.controls['Userid'].errors?.required">Userid is required</small>
+      </div>
+    </div>
+
+
+
+    <div>
+      <label for="name">name</label>
+      <input id="name" type="text" formControlName="name" />
+      <div formControlName="submitted && registerForm.controls['name'].invalid">
+        <small formControlName="registerForm.controls['name'].errors?.required">name is required</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="mobilnumber">mobilnumber</label>
+      <input id="mobilnumber" type="number" formControlName="mobilnumber" />
+      <div formControlName="submitted && registerForm.controls['mobilnumber'].invalid">
+        <small formControlName="registerForm.controls['mobilnumber'].errors?.required">mobilnumber is required</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="email" formControlName="email" />
+      <div formControlName="submitted && registerForm.controls['email'].invalid">
+        <small formControlName="registerForm.controls['email'].errors?.required">Email is required</small>
+        <small formControlName="registerForm.controls['email'].errors?.email">Please enter a valid email address</small>
+      </div>
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+      <div formControlName="submitted && registerForm.controls['password'].invalid">
+        <small formControlName="registerForm.controls['password'].errors?.required">Password is required</small>
+        <small formControlName="registerForm.controls['password'].errors?.minlength">
+          Password must be at least 6 characters long
+        </small>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>

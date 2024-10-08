@@ -7,11 +7,14 @@ import { Router } from '@angular/router';
   selector: 'app-superadmin-forms',
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './superadmin-forms.component.html',
+  templateUrl: './superadmin-forms.component.html', 
   styleUrl: './superadmin-forms.component.css'
 })
 export class SuperadminFormsComponent {
+
   SuperadminForms:FormGroup;
+  selectedOption = -1;
+  
   constructor(private formBuilder:FormBuilder,private httpClient:HttpClient, private route: Router){
     this.SuperadminForms=this.formBuilder.group(
       {
@@ -21,17 +24,17 @@ export class SuperadminFormsComponent {
       }
     )
   }
+  
   onSubmit(){
     console.log('onsubmit called') ;
     console.log(this.SuperadminForms.value)
     this.httpClient.post('http://localhost:8085/superadmin',this.SuperadminForms.value).subscribe((data:any)=>
     console.log('data',data)) ;
     this.SuperadminForms.reset();
-    this.route.navigate(["/dashboard/emps"]);
+    this.route.navigate(["/dashboard/emps/" + this.selectedOption]);
   };
-  navigate(){
-
-  }navigate1(){
-    
+  
+  navigate(option: number){
+    this.selectedOption = option;
   }
 }
