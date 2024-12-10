@@ -31,13 +31,13 @@
           </div> -->
           
           <div class="mb-3">
-            <label class="form-check-label" for="defaultcheck1"> Usernmae </label>
+            <label class="form-check-label" for="defaultcheck1"> Username </label>
             <input
               class="form-check-input"
               class="checkbox"
-              value=""
+              value="SCVA000"
               id="defaultcheck2"
-              formControlName="Usernmae"
+              formControlName="userid"
             />
           </div>
 
@@ -48,18 +48,18 @@
             <input
               class="form-check-input"
               class="checkbox"
-              value=""
+              value="SCVA000"
               id="defaultcheck3"
               formControlName="password"
             />
           </div>
 
           <span>
-          <select class="form-select form-select-sm" aria-label="Small select example">
-            <option selected>Open this select menu</option>
+          <select class="form-select form-select-sm" aria-label="Small select example" (change)="selectedEvent($event)">
+            <option selected value="-1"> select Login </option>
             <option value="1">Admin</option>
-            <option value="2">Courses</option>
-            <option value="3">Student</option>
+            <option value="2">Course</option>
+            <option value="3">student</option>
             <option value="4">Employee</option>
           </select>
           </span>

@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,11 @@ export const routes: Routes = [
 },
 {
     path: "superadmin",component:SuperadminComponent
+
+},
+
+{
+    path:"registration-form",component:RegistrationFormComponent
 },
 {
     path: "",component:SuperadminFormsComponent
@@ -45,6 +51,10 @@ export const routes: Routes = [
 {
     path: '',component:DashboardComponent
 },
+
+{
+    path:'admin-dashboard',component:AdminDashboardComponent
+},
 {
     'path': 'dashboard', component: DashboardComponent,
     children: [
@@ -63,8 +73,8 @@ export const routes: Routes = [
         path: "pdf_viewer/:id", component: PdfViewerComponent
     },
     {
-        path:"admin-dashboard",component:AdminDashboardComponent
-    },
+       path: 'students/:id',component: StudentComponent
+    }
     
     
     ]

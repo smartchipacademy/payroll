@@ -14,7 +14,7 @@ export class RegistrationFormComponent implements OnInit{
   registerForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder ) {
 
     this.registerForm = this.formBuilder.group({
       username: ['', Validators.required],
