@@ -54,6 +54,7 @@ public class UsersController {
             existingUsers.setPassword(users.getPassword());
             existingUsers.setRecentvideo(users.getRecentvideo());
             existingUsers.setLoginType(users.getLoginType());
+            existingUsers.setRoleId(users.getRoleId());
             usersService.saveOrUpdataUsers(existingUsers);
 
         } else {
@@ -71,6 +72,19 @@ public class UsersController {
     public ResponseEntity<Users> login(@RequestBody Users user) {
         System.out.println("username = "+ user.getUserid());
         System.out.println("password = "+ user.getPassword());
+        System.out.println("Login Type : " + user.getLoginType());
+        if(user.getLoginType().equals("1")){
+            user.setLoginType("Admin");
+        }
+        if(user.getLoginType().equals("2")){
+            user.setLoginType("Course");
+        }
+        if(user.getLoginType().equals("3")){
+            user.setLoginType("Student");
+        }
+        if(user.getLoginType().equals("4")){
+            user.setLoginType("Employee");
+        }
         Users userfromdb = usersService.findUserId(user.getUserid(),user.getPassword(),user.getLoginType());
         if (userfromdb != null) {
             return ResponseEntity.ok(userfromdb);
