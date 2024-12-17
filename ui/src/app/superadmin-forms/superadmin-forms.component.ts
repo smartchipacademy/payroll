@@ -3,13 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxDefaultOptions, MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-superadmin-forms',
   standalone: true,
-  imports: [ReactiveFormsModule, MatSelectModule],
+  imports: [ReactiveFormsModule, MatSelectModule, MatButtonModule, MatCheckboxModule],
   templateUrl: './superadmin-forms.component.html', 
-  styleUrl: './superadmin-forms.component.css'
+  styleUrl: './superadmin-forms.component.css',
+  providers: [
+    {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: 'noop' } as MatCheckboxDefaultOptions}
+  ]
 })
 export class SuperadminFormsComponent {
 
@@ -51,7 +56,7 @@ export class SuperadminFormsComponent {
         }
         if(this.selectedOption===4){
           const empId = "123";
-          this.route.navigate(["/dashboard/emp/:empId"]);
+          this.route.navigate(["/emp/:empId"]);
         }
       }else{
         console.error("INVALID CREDENTIALS!!")

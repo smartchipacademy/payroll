@@ -47,3 +47,13 @@ small {
   color: red;
   font-size: 12px;
 }
+
+.close {
+  display: block;
+  float: right;
+}
+
+.close-container {
+  display: block;
+  width: 100%;
+}

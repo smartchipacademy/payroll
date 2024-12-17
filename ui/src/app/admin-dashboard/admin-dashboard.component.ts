@@ -1,22 +1,34 @@
 import { Component } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
-import { RouterModule } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
+import {RegistrationFormComponent } from '../registration-form/registration-form.component';
+import { Router } from '@angular/router';
+import {MatDialogModule, MatDialog} from '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
-  imports: [RouterOutlet,RouterModule,],
+  imports: [MatButtonModule, MatDialogModule],
   templateUrl: './admin-dashboard.component.html',
   styleUrl: './admin-dashboard.component.css'
 })
 export class AdminDashboardComponent {
- constructor(private router: Router){}
+ constructor(private route: Router, private dialog: MatDialog){}
+
+ logout() {
+  this.route.navigate(["/"]);
   
-
- navigateToRegistration(){
-
-  this.router.navigate(['registration-form']);
+  }
+  
+ openPopUp(): void{
+  this.dialog.open(RegistrationFormComponent);
  }
+
+//  navigateToRegistration(){
+
+//   this.router.navigate(['registration-form']);
+//  }
 
 
 

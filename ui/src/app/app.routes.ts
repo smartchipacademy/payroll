@@ -56,14 +56,15 @@ export const routes: Routes = [
     path:'admin-dashboard',component:AdminDashboardComponent
 },
 {
+    path: 'emp/:id',component: EmpComponent
+},
+{
     'path': 'dashboard', component: DashboardComponent,
     children: [
       {
         path: 'sample',
         component: LoginFormComponent
-      },{
-        path: 'emp/:id',component: EmpComponent
-    },
+      },
 
     {
         path: "video_player/:id", component: VideoPlayerComponent

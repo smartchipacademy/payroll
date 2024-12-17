@@ -32,10 +32,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.activatedRoute.snapshot.params['id']);
     this.selectedUser = this.activatedRoute.snapshot.params["id"];
-    this.http.get("http://192.168.0.129:8085/videos").subscribe((data: any) => {
+    this.http.get("http://localhost:8085/videos").subscribe((data: any) => {
       this.videoList = data;
     });
-    this.http.get("http://192.168.0.129:8085/resources").subscribe((data: any) => {
+    this.http.get("http://localhost:8085/resources").subscribe((data: any) => {
       this.PDFList = data;
     });
   }
