@@ -29,5 +29,11 @@ export class SuperuserFormComponent {
     this.SuperuserForm.reset(); 
     this.route.navigate(["/login-form"]);
   };
+  navigate(){
+
+  }navigate1(){
+    
+  }
+
 
 }

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h2>Upload File</h2>
+    <form (ngSubmit)="onSubmit()" uploadForm="ngForm">
+      <div class="form-group">
+        <label for="fileInput">Choose File:</label>
+        <input
+          type="file"
+          id="fileInput"
+          (change)="onFileSelected($event)"
+          class="form-control"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary mt-3"
+        (click)="onUpload()"
+        [disabled]="!selectedFile"
+      >
+        Upload
+      </button>
+    </form>
+  </div>
+  

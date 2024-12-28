@@ -34,7 +34,38 @@ h1::first-letter {
     text-decoration: none;
   }
 
+  .form-check {
+    margin-right: 70px;
+  }
   
+  .card {
+    width: 90vw;
+    height: 8vh;
+    border-radius: 2px;
+    margin: 2vh 5vw 2vh 5vw;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    border-radius: 2vw;
+    padding: 0vh 1vw 0vh 1vw;
+  }
+  
+  .play-icon {
+    height: 6vh;
+    width: 4vw;
+    display: block;
+    margin: 0.4vh 0vw 0.2vh 0.2vw;
+  }
+  
+  .video-name {
+    padding: 1vw;
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .mat-tab {
+    overflow: auto;
+  }
   
   
   
